@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,12 +37,14 @@ public class PublicarObjetoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nombreProducto = txtNombre.getText().toString();
+                int idCategoria = rdgCategorias.getCheckedRadioButtonId();
 
                 if (nombreProducto.isEmpty()){
                     txtNombre.setError("El nombre no puede estar vacio");
+                } else if (idCategoria == -1){
+                    Toast.makeText(PublicarObjetoActivity.this, "Por favor selecciona una cateogoria", Toast.LENGTH_SHORT).show();
                 } else {
                     String categoriaSeleccionada = "Sin categoria";
-                    int idCategoria = rdgCategorias.getCheckedRadioButtonId();
 
                     if (idCategoria == R.id.rd_ropa){
                         categoriaSeleccionada = "Ropa";

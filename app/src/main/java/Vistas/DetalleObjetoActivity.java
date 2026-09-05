@@ -30,6 +30,7 @@ public class DetalleObjetoActivity extends AppCompatActivity {
         TextView lblMostrarNombre = findViewById(R.id.lbl_nombre);
         TextView lblMostrarCategoria = findViewById(R.id.lbl_categoriaprod);
         Button btnAceptar = findViewById(R.id.btn_Aceptar);
+        Button btnVolver = findViewById(R.id.btn_volver);
 
         Intent intentRecibido = getIntent();
 
@@ -50,6 +51,13 @@ public class DetalleObjetoActivity extends AppCompatActivity {
                 intentRetorno.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
                 startActivity(intentRetorno);
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
