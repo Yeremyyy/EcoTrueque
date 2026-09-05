@@ -37,30 +37,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.228" />
 
-    <RadioButton
-        android:id="@+id/rd_ropa"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:text="Ropa"
-        android:textColor="#F0F0F0"
-        app:layout_constraintBottom_toTopOf="@+id/rd_libros"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
-
     <RadioGroup
         android:id="@+id/rdg_categorias"
-        android:layout_width="10dp"
-        android:layout_height="14dp"
+        android:layout_width="289dp"
+        android:layout_height="146dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447">
+        app:layout_constraintVertical_bias="0.618">
 
+        <RadioButton
+            android:id="@+id/rd_ropa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ropa"
+            android:textColor="#F8F8F8"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rd_libros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libros"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rd_tecnologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tecnologia"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
     </RadioGroup>
 
     <TextView
@@ -77,30 +87,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.403" />
-
-    <RadioButton
-        android:id="@+id/rd_tecnologia"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="192dp"
-        android:text="Tecnologia"
-        android:textColor="#F6F4F4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioButton
-        android:id="@+id/rd_libros"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:text="Libros"
-        android:textColor="#FAF8F8"
-        app:layout_constraintBottom_toTopOf="@+id/rd_tecnologia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txt_nombre"
